@@ -12,7 +12,7 @@ Step 1: Clone the repo
 ```
 $ git clone https://github.com/TaxiN/sample-postgres-env
 
-$ cd ./postgre_env
+$ cd ./sample-postgres-env
 ```
 
 
