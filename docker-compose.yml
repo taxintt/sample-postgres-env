@@ -1,0 +1,19 @@
+version: "3"
+services:
+  db:
+    image: postgres:10-alpine
+    container_name: postgres-container 
+    ports: 
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+      - DATABASE_HOST
+    volumes:
+      - mydata:/var/lib/postgresql/data 
+      - ./init:/docker-entrypoint-initdb.d
+
+volumes:
+  mydata:
+    driver: local
